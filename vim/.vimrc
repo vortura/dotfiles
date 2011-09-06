@@ -25,12 +25,12 @@ set ruler
 set backspace=indent,eol,start
 set laststatus=2
 
-"set undodir=~/tmp/undo//     " undo files
-"set directory=~/tmp/swap//   " swap files
+set directory=~/.vim/tmp/swap//   " swap files
 
 "Macvim only settings
 if has("gui_running")
     set relativenumber
+    set undodir=~/.vim/tmp/undo//     " undo files
     set undofile
     set colorcolumn=85
 endif
