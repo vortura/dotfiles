@@ -6,4 +6,4 @@ plugins=(git brew)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Users/richard/bin:/usr/local/bin:$PATH
+export PATH=/Users/richard/bin:/usr/local/sbin:/usr/local/bin:$PATH
