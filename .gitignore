@@ -1,0 +1,8 @@
+.DS_Store
+*.pyc
+.netrwhist
+*.swp
+*.swo
+tags
+
+vim/tmp
