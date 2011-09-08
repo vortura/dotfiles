@@ -1,7 +1,7 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="vortura"
 DISABLE_AUTO_UPDATE="true"
-plugins=(git command-coloring)
+plugins=(git brew)
 
 source $ZSH/oh-my-zsh.sh
 
