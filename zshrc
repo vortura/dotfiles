@@ -6,7 +6,7 @@ plugins=(brew git osx vagrant)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Users/richard/bin:/usr/local/sbin:/usr/local/share/python:$PATH
+export PATH=/Users/richard/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/python:$PATH
 
 case `uname` in
     Darwin)
