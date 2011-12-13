@@ -19,6 +19,7 @@ esac
 
 # Python stuff
 export WORKON_HOME="${HOME}/lib/virtualenvs"
+export PROJECT_HOME="${HOME}/Dropbox/projects"
 export VEW_PATH="/usr/local/share/python/virtualenvwrapper.sh"
 
 [[ -d $WORKON_HOME ]] || mkdir -p $WORKON_HOME
