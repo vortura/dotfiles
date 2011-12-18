@@ -92,3 +92,5 @@ set grepprg=grep\ -nH\ $*
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
 
+" Filetype detection
+au BufNewFile,BufRead *.less set filetype=css
