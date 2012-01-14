@@ -94,3 +94,4 @@ let g:tex_flavor='latex'
 
 " Filetype detection
 au BufNewFile,BufRead *.less set filetype=css
+au BufNewFile,BufRead *.j2 set filetype=html
