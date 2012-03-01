@@ -29,6 +29,7 @@ set directory=~/.vim/tmp/swap//   " swap files
 
 "Macvim only settings
 if has("gui_running")
+    set guioptions=-t
     set relativenumber
     set undodir=~/.vim/tmp/undo//     " undo files
     set undofile
