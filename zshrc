@@ -25,3 +25,6 @@ export VEW_PATH="/usr/local/share/python/virtualenvwrapper.sh"
 [[ -d $WORKON_HOME ]] || mkdir -p $WORKON_HOME
 source $VEW_PATH
 export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+# Aliases
+alias ls='ls -FG'
