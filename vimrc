@@ -58,7 +58,6 @@ set formatoptions=qrn1
 set listchars=tab:▸\ ,eol:¬
 set list
 
-nnoremap ; :
 inoremap jj <ESC>
 
 au FocusLost * :wa
@@ -80,7 +79,8 @@ nnoremap <C-l> <C-w>l
 highlight NonText guifg=#D9D9D9
 highlight SpecialKey guifg=#D9D9D9
 
-colorscheme molokai
+set background=dark
+colorscheme solarized
 
 " LaTeX stuff
 " IMPORTANT: grep will sometimes skip displaying the file name if you
