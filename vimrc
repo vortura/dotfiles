@@ -68,6 +68,7 @@ nnoremap <leader>v V`
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<CR>
 nnoremap <leader>1 yypVr=
 nnoremap <leader>l :set list!<CR>
+let g:ctrlp_map = '<leader>p'
 
 nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <C-h> <C-w>h
@@ -81,17 +82,6 @@ highlight SpecialKey guifg=#D9D9D9
 
 set background=dark
 colorscheme solarized
-
-" LaTeX stuff
-" IMPORTANT: grep will sometimes skip displaying the file name if you
-" search in a singe file. This will confuse Latex-Suite. Set your grep
-" program to always generate a file-name.
-set grepprg=grep\ -nH\ $*
-
-" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
-" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
-" The following changes the default filetype back to 'tex':
-let g:tex_flavor='latex'
 
 " Filetype detection
 au BufNewFile,BufRead *.less set filetype=css
