@@ -1,5 +1,5 @@
 filetype off
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 filetype plugin indent on
 
 set nocompatible
@@ -68,7 +68,7 @@ nnoremap <leader>v V`
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<CR>
 nnoremap <leader>1 yypVr=
 nnoremap <leader>l :set list!<CR>
-let g:ctrlp_map = '<leader>p'
+let g:ctrlp_map = '<leader>,'
 
 nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <C-h> <C-w>h
