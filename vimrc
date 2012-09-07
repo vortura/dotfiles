@@ -83,6 +83,9 @@ highlight SpecialKey guifg=#D9D9D9
 set background=dark
 colorscheme solarized
 
+" Powerline
+let g:Powerline_symbols = 'fancy'
+
 " Filetype detection
 au BufNewFile,BufRead *.less set filetype=css
 au BufNewFile,BufRead *.j2 set filetype=html
