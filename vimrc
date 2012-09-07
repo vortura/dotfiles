@@ -86,6 +86,22 @@ colorscheme solarized
 " Powerline
 let g:Powerline_symbols = 'fancy'
 
+" NERD Tree {{{
+
+noremap  <F2> :NERDTreeToggle<cr>
+inoremap <F2> <esc>:NERDTreeToggle<cr>
+
+let NERDTreeHighlightCursorline = 1
+let NERDTreeIgnore = ['.vim$', '.*\.pyc$', '.*.pid']
+
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let NERDChristmasTree = 1
+let NERDTreeChDirMode = 2
+let NERDTreeMapJumpFirstChild = 'gK'
+
+" }}}
+
 " Filetype detection
 au BufNewFile,BufRead *.less set filetype=css
 au BufNewFile,BufRead *.j2 set filetype=html
