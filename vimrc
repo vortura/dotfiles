@@ -33,7 +33,7 @@ if has("gui_running")
     set relativenumber
     set undodir=~/.vim/tmp/undo//     " undo files
     set undofile
-    set colorcolumn=85
+    set colorcolumn=+1
 endif
 
 let mapleader = ","
@@ -51,7 +51,7 @@ nnoremap <leader><space> :noh<cr>
 "vnoremap <tab> %
 
 set wrap
-set textwidth=79
+set textwidth=80
 set formatoptions=qrn1
 
 " Show invisible chars by default
