@@ -9,6 +9,7 @@ let b:did_ftplugin = 1
 setlocal expandtab
 setlocal shiftwidth=2
 setlocal tabstop=2
+setlocal fdm=syntax
 
 
 setlocal cindent
@@ -19,7 +20,15 @@ setlocal suffixesadd=.pde
 let b:undo_ftplugin = "set cin< cink< fo< sua< et< sw< ts<"
 
 
-if has("python") && exists("processing_doc_path")
+if has("python")
+
+    if !exists("g:processing_doc_style")
+        let g:processing_doc_style = "web"
+    endif
+
+    if !exists("g:processing_doc_path")
+        let g:processing_doc_style = "web"
+    endif
 
 function! ProcessingDoc()
 python << ENDPY
@@ -28,21 +37,51 @@ import re
 import webbrowser
 from os import path
 
-basepath = path.abspath(vim.eval("g:processing_doc_path"))
-(row, col) = vim.current.window.cursor
-line = vim.current.line
-if re.match(r"\w+\s*\(", line[col:]):
-    fun = True
-else:
-    fun = False
-word = vim.eval('expand("<cword>")')
-
-def launchDoc(filename):
+def launchDocFile(filename):
     docfile = path.join(basepath, filename)
     if path.exists(docfile) and path.isfile(docfile):
         webbrowser.open(docfile)
         return True
     return False
+
+def launchDocWeb(filename):
+    docfile = "http://processing.org/reference/"
+    webbrowser.open(docfile+filename)
+    return True
+
+def wordStart(line, column):
+    start = column
+    for i in reversed(range(column)):
+        if line[i].isalnum():
+            start = i
+        else:
+            break
+    return start
+
+if vim.eval("g:processing_doc_style") == "local":
+    basepath = path.abspath(vim.eval("g:processing_doc_path"))
+    launchDoc = launchDocFile
+else:
+    launchDoc = launchDocWeb
+
+(row, col) = vim.current.window.cursor
+line = vim.current.line
+
+col = wordStart(line, col)
+if re.match(r"\w+\s*\(", line[col:]):
+    if col < 4:
+        fun = True
+    else:
+        col -= 4
+        if re.match(r"new\s*\w+\s*\(", line[col:]):
+            fun = False
+        else:
+            fun = True
+else:
+    fun = False
+
+word = vim.eval('expand("<cword>")')
+
 
 if word:
     if fun:
@@ -57,4 +96,21 @@ endfunction
 
 nnoremap <silent> <buffer> K :call ProcessingDoc()<CR>
 
-endif
+endif "has("python")
+
+
+if has("macunix")
+
+    let s:runner = expand('<sfile>:p:h').'/../bin/runPSketch.scpt'
+
+    function! RunProcessing()
+        let sketch = expand("%:p:h:t")
+        silent execute "!osascript ".s:runner." ".sketch
+    endfunction "RunProcessing
+
+    map <F5> :call RunProcessing()<CR>
+    command! RunProcessing call RunProcessing()
+
+endif "has("macunix")
+
+
