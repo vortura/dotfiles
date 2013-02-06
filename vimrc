@@ -67,6 +67,7 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 nnoremap <leader>v V`
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<CR>
 nnoremap <leader>1 yypVr=
+nnoremap <leader>2 yypVr-
 nnoremap <leader>l :set list!<CR>
 let g:ctrlp_map = '<leader>,'
 
@@ -99,6 +100,9 @@ let NERDTreeDirArrows = 1
 let NERDChristmasTree = 1
 let NERDTreeChDirMode = 2
 let NERDTreeMapJumpFirstChild = 'gK'
+
+" vim-processing
+let g:use_processing_java = 1
 
 " }}}
 
