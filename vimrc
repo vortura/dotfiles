@@ -101,10 +101,14 @@ let NERDChristmasTree = 1
 let NERDTreeChDirMode = 2
 let NERDTreeMapJumpFirstChild = 'gK'
 
+" }}}
+
 " vim-processing
 let g:use_processing_java = 1
 
-" }}}
+" CtrlP
+nnoremap <leader>. :CtrlP<CR>
+nnoremap <leader><leader> :CtrlPBuffer<CR>
 
 " Filetype detection
 au BufNewFile,BufRead *.less set filetype=css
