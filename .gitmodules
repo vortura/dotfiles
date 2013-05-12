@@ -13,3 +13,6 @@
 [submodule "vim/bundle/processing"]
 	path = vim/bundle/processing
 	url = git@github.com:vortura/vim-processing.git
+[submodule "vim/bundle/supertab"]
+	path = vim/bundle/supertab
+	url = https://github.com/ervandew/supertab.git
