@@ -26,5 +26,8 @@ export VEW_PATH="/usr/local/share/python/virtualenvwrapper.sh"
 source $VEW_PATH
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
+# Java stuff
+export JAVA_HOME=$(/usr/libexec/java_home)
+
 # Aliases
 alias ls='ls -FG'
