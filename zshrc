@@ -10,7 +10,7 @@ export PATH=${HOME}/bin:/usr/local/share/python:/usr/local/sbin:/usr/local/bin:$
 
 case `uname` in
     Darwin)
-        export EDITOR='mvim -f -c "au VimLeave * !open -a Terminal"'
+        export EDITOR='mvim -f -c "au VimLeave * !open -a iTerm"'
         ;;
     *)
         export EDITOR=vim;
