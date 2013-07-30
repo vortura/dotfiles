@@ -10,7 +10,7 @@ export PATH=${HOME}/bin:/usr/local/share/python:/usr/local/sbin:/usr/local/bin:$
 
 case `uname` in
     Darwin)
-        export EDITOR='mvim -f -c "au VimLeave * !open -a Terminal"'
+        export EDITOR='mvim -f -c "au VimLeave * !open -a iTerm"'
         ;;
     *)
         export EDITOR=vim;
@@ -25,6 +25,9 @@ export VEW_PATH="/usr/local/share/python/virtualenvwrapper.sh"
 [[ -d $WORKON_HOME ]] || mkdir -p $WORKON_HOME
 source $VEW_PATH
 export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+# Java stuff
+export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Aliases
 alias ls='ls -FG'
