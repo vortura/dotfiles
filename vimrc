@@ -67,6 +67,7 @@ nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<CR>
 nnoremap <leader>1 yypVr=
 nnoremap <leader>2 yypVr-
 nnoremap <leader>l :set list!<CR>
+nnoremap <leader>p :set paste!<CR>
 let g:ctrlp_map = '<leader>,'
 
 nnoremap <leader>w <C-w>v<C-w>l
