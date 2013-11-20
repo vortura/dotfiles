@@ -76,12 +76,13 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-"Invisible character colors
-highlight NonText guifg=#D9D9D9
-highlight SpecialKey guifg=#D9D9D9
-
 set background=dark
+let g:solarized_termcolors=16
 colorscheme solarized
+
+"Invisible character colors
+highlight NonText cterm=none guifg=#D9D9D9
+highlight SpecialKey cterm=none guifg=#D9D9D9
 
 " Powerline
 let g:Powerline_symbols = 'fancy'
