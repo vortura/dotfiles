@@ -84,8 +84,8 @@ colorscheme solarized
 highlight NonText cterm=none guifg=#D9D9D9
 highlight SpecialKey cterm=none guifg=#D9D9D9
 
-" Powerline
-let g:Powerline_symbols = 'fancy'
+" Airline configuration
+let g:airline_powerline_fonts = 1
 
 " NERD Tree {{{
 
