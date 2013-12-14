@@ -1,3 +1,4 @@
+## Configure and load oh-my-zsh
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="vortura"
 DISABLE_AUTO_UPDATE="true"
@@ -5,7 +6,7 @@ plugins=(brew git osx pip vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
-# General environment stuff 
+## General environment stuff
 export PATH=${HOME}/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/python:${PATH}
 
 case `uname` in
@@ -17,7 +18,7 @@ case `uname` in
         ;;
 esac
 
-# Python stuff
+## Python stuff
 export WORKON_HOME="${HOME}/lib/virtualenvs"
 export PROJECT_HOME="${HOME}/Dropbox/projects"
 export VEW_PATH="/usr/local/share/python/virtualenvwrapper.sh"
@@ -31,8 +32,8 @@ export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 source $VEW_PATH
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
-# Java stuff
+## Java stuff
 export JAVA_HOME=$(/usr/libexec/java_home)
 
-# Aliases
+## Aliases
 alias ls='ls -FG'
