@@ -6,7 +6,6 @@ filetype plugin indent on
 set nocompatible
 
 set modelines=0
-
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -25,17 +24,18 @@ set ttyfast
 set ruler
 set backspace=indent,eol,start
 set laststatus=2
-
+set colorcolumn=+1
 set directory=~/.vim/tmp/swap//   " swap files
+set undodir=~/.vim/tmp/undo//     " undo files
+set undofile
+
 
 "Macvim only settings
 if has("gui_running")
     set guioptions=-t
     set relativenumber
-    set undodir=~/.vim/tmp/undo//     " undo files
-    set undofile
-    set colorcolumn=+1
 endif
+
 
 let mapleader = ","
 
@@ -77,13 +77,21 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+"Colorscheme {{
 set background=dark
 let g:solarized_termcolors=16
+
+if !has("gui_running")
+    let g:solarized_italic=0
+endif
+
 colorscheme solarized
 
 "Invisible character colors
 highlight NonText cterm=none guifg=#D9D9D9
 highlight SpecialKey cterm=none guifg=#D9D9D9
+syntax on 
+" }}
 
 " Airline configuration
 let g:airline_powerline_fonts = 1
