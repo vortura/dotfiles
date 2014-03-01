@@ -90,7 +90,7 @@ colorscheme solarized
 "Invisible character colors
 highlight NonText cterm=none guifg=#D9D9D9
 highlight SpecialKey cterm=none guifg=#D9D9D9
-syntax on 
+syntax on
 " }}
 
 " Airline configuration
