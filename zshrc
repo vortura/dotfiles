@@ -9,15 +9,8 @@ source $ZSH/oh-my-zsh.sh
 
 ## General environment stuff
 export PATH=${HOME}/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/python:${PATH}
-
-case `uname` in
-    Darwin)
-        export EDITOR='mvim -f -c "au VimLeave * !open -a iTerm"'
-        ;;
-    *)
-        export EDITOR=vim;
-        ;;
-esac
+export VISUAL=vim
+export EDITOR=vim
 
 
 ## Python stuff
