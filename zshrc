@@ -14,22 +14,24 @@ export EDITOR=vim
 
 
 ## Python stuff
-export WORKON_HOME="${HOME}/lib/virtualenvs"
-export PROJECT_HOME="${HOME}/Dropbox/projects"
 export VEW_PATH="/usr/local/share/python/virtualenvwrapper.sh"
 
-# pip should only run if there is a virtualenv currently activated
-export PIP_REQUIRE_VIRTUALENV=true
-# # cache pip-installed packages to avoid re-downloading
-export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+if [[ -x $VEW_PATH ]]; then
+    export WORKON_HOME="${HOME}/lib/virtualenvs"
+    export PROJECT_HOME="${HOME}/Dropbox/projects"
+    [[ -d $WORKON_HOME ]] || mkdir -p $WORKON_HOME
+    source $VEW_PATH
+    export VIRTUAL_ENV_DISABLE_PROMPT=1
 
-[[ -d $WORKON_HOME ]] || mkdir -p $WORKON_HOME
-source $VEW_PATH
-export VIRTUAL_ENV_DISABLE_PROMPT=1
+    # pip should only run if there is a virtualenv currently activated
+    export PIP_REQUIRE_VIRTUALENV=true
+    # # cache pip-installed packages to avoid re-downloading
+    export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+fi
 
 
 ## Java stuff
-export JAVA_HOME=$(/usr/libexec/java_home)
+[[ -x /usr/libexec/java_home ]] && export JAVA_HOME=$(/usr/libexec/java_home)
 
 
 ## Aliases
