@@ -24,10 +24,14 @@ set ttyfast
 set ruler
 set backspace=indent,eol,start
 set laststatus=2
-set colorcolumn=+1
 set directory=~/.vim/tmp/swap//   " swap files
-set undodir=~/.vim/tmp/undo//     " undo files
-set undofile
+
+" Vim 7.3 options
+if version >= 703
+    set colorcolumn=+1
+    set undodir=~/.vim/tmp/undo//     " undo files
+    set undofile
+endif
 
 
 "Macvim only settings
