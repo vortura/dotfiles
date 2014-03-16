@@ -34,9 +34,15 @@ fi
 [[ -x /usr/libexec/java_home ]] && export JAVA_HOME=$(/usr/libexec/java_home)
 
 
-## Aliases
+#############
+## Aliases ##
+#############
 alias ls='ls -FG'
 
+
+###############
+## Functions ##
+###############
 
 ## tmux
 
@@ -68,7 +74,15 @@ ssh() {
     fi
 }
 
+
+# Same as the ssh wrapper, but for mosh
 mosh() {
     ssh $@
 }
 
+
+# Start a web server in the current directory
+server() {
+    local port="${1:-8000}"
+    open "http://localhost:${port}" && python -m SimpleHTTPServer $port
+}
