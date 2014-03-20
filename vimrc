@@ -115,6 +115,15 @@ let NERDTreeChDirMode = 2
 let NERDTreeMapJumpFirstChild = 'gK'
 
 " }}}
+" YAML {{{
+
+augroup ft_yaml
+    au!
+
+    au FileType yaml set shiftwidth=2
+augroup END
+
+" }}}
 
 " vim-processing
 let g:use_processing_java = 1
