@@ -42,6 +42,7 @@ endif
 
 
 let mapleader = ","
+let maplocalleader = "\\"
 
 nnoremap / /\v
 vnoremap / /\v
@@ -122,6 +123,14 @@ augroup ft_yaml
 
     au FileType yaml set shiftwidth=2
 augroup END
+
+" }}}
+" tslime {{{
+
+let g:tslime_ensure_trailing_newlines = 1
+let g:tslime_normal_mapping = '<localleader>T'
+let g:tslime_visual_mapping = '<localleader>t'
+let g:tslime_vars_mapping = '<localleader>t'
 
 " }}}
 

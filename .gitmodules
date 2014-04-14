@@ -37,3 +37,6 @@
 [submodule "vim/bundle/vim-airline"]
 	path = vim/bundle/vim-airline
 	url = git@github.com:bling/vim-airline.git
+[submodule "vim/bundle/tslime"]
+	path = vim/bundle/tslime
+	url = git@github.com:sjl/tslime.vim.git
