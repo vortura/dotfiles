@@ -19,6 +19,7 @@ BACKUP_DIR_PATH = File.join(ENV['HOME'],
                              DateTime.now.strftime("%Y-%m-%d-%H-%M-%S"))
 EXCLUDES = [
   SCRIPT_NAME,
+  'terminfo',
   '.git',
   '.gitignore',
   '.gitmodules',
@@ -75,8 +76,15 @@ task :symlink do
     end
 end
 
+desc 'Compile terminfo files'
+task :terminfo do
+    Dir["#{CONFIG_DIR_PATH}/terminfo/*"].each do |source|
+        info "Compiling #{source}"
+    end
+end
+
 desc 'Install dot files.'
-task :install => [:symlink] do
+task :install => [:symlink, :terminfo] do
 end
 
 
