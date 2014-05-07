@@ -33,7 +33,6 @@ if version >= 703
     set undofile
 endif
 
-
 "Macvim only settings
 if has("gui_running")
     set guioptions=-t
@@ -144,3 +143,6 @@ nnoremap <leader><leader> :CtrlPBuffer<CR>
 " Filetype detection
 au BufNewFile,BufRead *.less set filetype=css
 au BufNewFile,BufRead *.j2 set filetype=html
+
+" Highlight comments in italics
+highlight Comment cterm=italic
