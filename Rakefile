@@ -78,8 +78,9 @@ end
 
 desc 'Compile terminfo files'
 task :terminfo do
-    Dir["#{CONFIG_DIR_PATH}/terminfo/*"].each do |source|
+    Dir["#{CONFIG_DIR_PATH}/terminfo/*.terminfo"].each do |source|
         info "Compiling #{source}"
+        `tic #{source}`
     end
 end
 
