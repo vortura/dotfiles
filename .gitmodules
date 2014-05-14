@@ -43,3 +43,4 @@
 [submodule "vim/bundle/vim-niji"]
 	path = vim/bundle/vim-niji
 	url = git@github.com:amdt/vim-niji.git
+    ignore = dirty
