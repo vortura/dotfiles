@@ -34,22 +34,6 @@ nmap -builtin <bs> <nop>
 nmap ,<space> <esc>:noh<CR>
 
 
-" NoScript
-" --------
-
-" Permanently add to trusted sites
-map ,s :set noscript-sites!=
-
-" Temporarily add to trusted sites
-map ,S :set noscript-tempsites!=
-
-" Untrust site
-map ,u :set noscript-untrusted!=
-
-" Use full URL by default for trust/untrust
-set noscript-list=address
-
-
 " Appearance
 " ----------
 
