@@ -8,7 +8,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 ## General environment stuff
-export PATH=${HOME}/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/python:/Applications/Racket\ v6.0/bin/:${PATH}
+export PATH=${HOME}/bin:/usr/local/sbin:/usr/local/bin:/Applications/Racket\ v6.0/bin:${PATH}
 export VISUAL=vim
 export EDITOR=vim
 
