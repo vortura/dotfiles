@@ -133,6 +133,10 @@ let g:tslime_vars_mapping = '<localleader>t'
 
 " }}}
 
+" Scheme {{{
+autocmd filetype lisp,scheme,art setlocal equalprg=scmindent.rkt
+" }}}
+
 " vim-processing
 let g:use_processing_java = 1
 

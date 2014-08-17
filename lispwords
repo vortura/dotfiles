@@ -1,0 +1,3 @@
+; lispwords file for scmindent.rkt
+; For details, see http://www.ccs.neu.edu/home/dorai/scmindent/
+(3 if)
