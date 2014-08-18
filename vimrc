@@ -150,3 +150,14 @@ au BufNewFile,BufRead *.j2 set filetype=html
 
 " Highlight comments in italics
 highlight Comment cterm=italic
+
+let g:niji_dark_colours = [
+  \ [ '81', '#5fd7ff'],
+  \ [ '99', '#875fff'],
+  \ [ '1',  '#dc322f'],
+  \ [ '9',  '#cb4b16'],
+  \ [ '3',  '#b58900'],
+  \ [ '2',  '#859900'],
+  \ [ '6',  '#2aa198'],
+  \ [ '4',  '#268bd2'],
+  \ ]
