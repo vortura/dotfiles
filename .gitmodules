@@ -44,3 +44,6 @@
 	path = vim/bundle/vim-niji
 	url = git@github.com:amdt/vim-niji.git
     ignore = dirty
+[submodule "vim/bundle/vim-paredit"]
+	path = vim/bundle/vim-paredit
+	url = git@github.com:kovisoft/paredit.git
