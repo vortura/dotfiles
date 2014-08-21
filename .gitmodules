@@ -46,5 +46,5 @@
     ignore = dirty
 [submodule "vim/bundle/paredit"]
 	path = vim/bundle/paredit
-	url = git@github.com:vim-scripts/paredit.vim.git
+	url = git@github.com:kovisoft/paredit.git
     ignore = dirty
