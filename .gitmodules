@@ -47,3 +47,4 @@
 [submodule "vim/bundle/vim-paredit"]
 	path = vim/bundle/vim-paredit
 	url = git@github.com:kovisoft/paredit.git
+    ignore = dirty
