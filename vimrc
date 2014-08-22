@@ -163,3 +163,4 @@ let g:niji_dark_colours = [
   \ ]
 
 let g:paredit_electric_return = 1
+let g:SuperTabCrMapping = 0
