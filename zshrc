@@ -14,7 +14,7 @@ export EDITOR=vim
 
 
 ## Python stuff
-export VEW_PATH="/usr/local/share/python/virtualenvwrapper.sh"
+export VEW_PATH="/usr/local/bin/virtualenvwrapper.sh"
 
 if [[ -x $VEW_PATH ]]; then
     export WORKON_HOME="${HOME}/lib/virtualenvs"
