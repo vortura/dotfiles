@@ -30,10 +30,6 @@ if [[ -x $VEW_PATH ]]; then
 fi
 
 
-## Java stuff
-[[ -x /usr/libexec/java_home ]] && export JAVA_HOME=$(/usr/libexec/java_home)
-
-
 #############
 ## Aliases ##
 #############
@@ -93,4 +89,9 @@ mosh() {
 server() {
     local port="${1:-8000}"
     open "http://localhost:${port}" && python -m SimpleHTTPServer $port
+}
+
+# Start Chrome
+chrome () {
+    /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome $* 2>&1 &
 }
