@@ -50,7 +50,7 @@ remote_wrapper() {
 
     # Do nothing if we are not inside tmux or ssh is called without arguments
     if [[ $# == 0 || -z $TMUX ]]; then
-        command ${ssh_cmd} $@
+        TERM=screen-256color command ${ssh_cmd} $@
         return
     fi
 
@@ -66,7 +66,7 @@ remote_wrapper() {
         tmux rename-window $remote
     fi
 
-    command ${ssh_cmd} $@
+    TERM=screen-256color command ${ssh_cmd} $@
     if [[ $renamed == 1 ]]; then
         tmux set-window-option -q -t ${this_window} automatic-rename on
     fi
