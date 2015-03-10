@@ -13,6 +13,13 @@ export VISUAL=vim
 export EDITOR=vim
 
 
+## On Linux, use xcape to map tapped ctrl to escape
+if [[ $(uname) == "Linux" ]]; then
+    setxkbmap -option 'caps:ctrl_modifier'
+    xcape -e 'Caps_Lock=Escape'
+fi
+
+
 ## Python stuff
 export VEW_PATH="/usr/local/bin/virtualenvwrapper.sh"
 
