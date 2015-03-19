@@ -61,8 +61,6 @@ set formatoptions=qrn1
 set listchars=tab:▸\ ,eol:¬
 set list
 
-inoremap jj <ESC>
-
 au FocusLost * :wa
 
 "Leader Mappings
