@@ -151,6 +151,12 @@ au BufNewFile,BufRead *.j2 set filetype=html
 " Highlight comments in italics
 highlight Comment cterm=italic
 
+let s:uname = system("echo -n \"$(uname)\"")
+"if !v:shell_error && s:uname == "Linux"
+"    set t_ZH=[3m
+"    set t_ZR=[23m
+"endif
+
 let g:niji_dark_colours = [
   \ [ '81', '#5fd7ff'],
   \ [ '99', '#875fff'],
