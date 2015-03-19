@@ -13,10 +13,15 @@ export VISUAL=vim
 export EDITOR=vim
 
 
-## On Linux, use xcape to map tapped ctrl to escape
+## On Linux:
+#    * Use xcape to map tapped ctrl to escape
+#    * Set ls color output
+#
 if [[ $(uname) == "Linux" ]]; then
     setxkbmap -option 'caps:ctrl_modifier'
     xcape -e 'Caps_Lock=Escape'
+    eval $(dircolors ~/.dir_colors)
+    export LS_OPTIONS='--color=auto'
 fi
 
 
@@ -40,7 +45,7 @@ fi
 #############
 ## Aliases ##
 #############
-alias ls='ls -FG'
+alias ls="ls $LS_OPTIONS"
 
 
 ###############
@@ -57,7 +62,7 @@ remote_wrapper() {
 
     # Do nothing if we are not inside tmux or ssh is called without arguments
     if [[ $# == 0 || -z $TMUX ]]; then
-        TERM=screen-256color command ${ssh_cmd} $@
+        TERM=xterm-256color command ${ssh_cmd} $@
         return
     fi
 
@@ -73,7 +78,7 @@ remote_wrapper() {
         tmux rename-window $remote
     fi
 
-    TERM=screen-256color command ${ssh_cmd} $@
+    TERM=xterm-256color command ${ssh_cmd} $@
     if [[ $renamed == 1 ]]; then
         tmux set-window-option -q -t ${this_window} automatic-rename on
     fi
