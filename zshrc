@@ -6,6 +6,17 @@ plugins=(brew git osx pip vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
+## Enable vi mode
+vi-search-fix() {
+  zle vi-cmd-mode
+  zle .vi-history-search-backward
+}
+
+bindkey -v
+autoload vi-search-fix
+zle -N vi-search-fix
+bindkey -M viins '\e/' vi-search-fix
+export KEYTIMEOUT=1
 
 ## General environment stuff
 export PATH=${HOME}/bin:/usr/local/sbin:/usr/local/bin:/Applications/Racket\ v6.0/bin:${PATH}
@@ -26,11 +37,15 @@ fi
 
 
 ## Python stuff
-export VEW_PATH="/usr/local/bin/virtualenvwrapper.sh"
+if [[ $(uname) == "Linux" ]]; then
+    export VEW_PATH="/usr/share/virtualenvwrapper/virtualenvwrapper.sh"
+else
+    export VEW_PATH="/usr/local/bin/virtualenvwrapper.sh"
+fi
 
-if [[ -x $VEW_PATH ]]; then
+if [[ -f $VEW_PATH ]]; then
     export WORKON_HOME="${HOME}/lib/virtualenvs"
-    export PROJECT_HOME="${HOME}/Dropbox/projects"
+    export PROJECT_HOME="${HOME}/projects"
     [[ -d $WORKON_HOME ]] || mkdir -p $WORKON_HOME
     source $VEW_PATH
     export VIRTUAL_ENV_DISABLE_PROMPT=1
