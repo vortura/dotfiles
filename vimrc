@@ -5,7 +5,7 @@ filetype plugin indent on
 
 set nocompatible
 
-set modelines=0
+set modelines=1
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -146,6 +146,7 @@ nnoremap <leader><leader> :CtrlPBuffer<CR>
 au BufNewFile,BufRead *.less set filetype=css
 au BufNewFile,BufRead *.j2 set filetype=html
 au BufNewFile,BufRead *.pp set ts=2 sw=2
+autocmd filetype sh setlocal ts=2 sw=2
 
 " Highlight comments in italics
 highlight Comment cterm=italic
