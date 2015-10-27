@@ -3,6 +3,9 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="vortura"
 DISABLE_AUTO_UPDATE="true"
 plugins=(brew git osx pip vagrant)
+if [[ $(uname) == "Linux" ]]; then
+    plugins+=(ssh-agent)
+fi
 
 source $ZSH/oh-my-zsh.sh
 
@@ -13,6 +16,7 @@ vi-search-fix() {
 }
 
 bindkey -v
+bindkey -M vicmd v edit-command-line
 autoload vi-search-fix
 zle -N vi-search-fix
 bindkey -M viins '\e/' vi-search-fix
