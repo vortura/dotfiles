@@ -48,9 +48,6 @@
 	path = vim/bundle/vim-paredit
 	url = git@github.com:kovisoft/paredit.git
     ignore = dirty
-[submodule "vim/bundle/puppet-syntax"]
-	path = vim/bundle/puppet-syntax
-	url = https://github.com/puppetlabs/puppet-syntax-vim.git
 [submodule "vim/bundle/puppet"]
 	path = vim/bundle/puppet
 	url = git://github.com/rodjek/vim-puppet.git
