@@ -22,8 +22,12 @@ zle -N vi-search-fix
 bindkey -M viins '\e/' vi-search-fix
 export KEYTIMEOUT=1
 
+## Go Stuff
+mkdir -p ~/working/go
+export GOPATH=~/working/go
+
 ## General environment stuff
-export PATH=${HOME}/bin:/usr/local/sbin:/usr/local/bin:/Applications/Racket\ v6.0/bin:${PATH}
+export PATH=${HOME}/bin:${GOPATH}/bin:/usr/local/sbin:/usr/local/bin:/Applications/Racket\ v6.0/bin:${PATH}
 export VISUAL=vim
 export EDITOR=vim
 
@@ -59,6 +63,7 @@ if [[ -f $VEW_PATH ]]; then
     # # cache pip-installed packages to avoid re-downloading
     export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 fi
+
 
 
 #############
