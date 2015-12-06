@@ -2,7 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="vortura"
 DISABLE_AUTO_UPDATE="true"
-plugins=(brew git osx pip vagrant)
+plugins=(brew docker git osx pip vagrant)
 if [[ $(uname) == "Linux" ]]; then
     plugins+=(ssh-agent)
 fi
