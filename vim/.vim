@@ -1,1 +1,0 @@
-/Users/richard/.vim
