@@ -135,6 +135,11 @@ let g:tslime_vars_mapping = '<localleader>T'
 autocmd filetype lisp,scheme,art setlocal equalprg=scmindent.rkt
 " }}}
 
+" vim-go {{{
+let g:go_dispatch_enabled = 1
+let g:go_fmt_command = "goimports"
+" }}}
+
 " vim-processing
 let g:use_processing_java = 1
 
