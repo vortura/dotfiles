@@ -148,6 +148,7 @@ nnoremap <leader>. :CtrlP<CR>
 nnoremap <leader><leader> :CtrlPBuffer<CR>
 
 " Filetype detection
+au BufNewFile,BufRead *.adoc set filetype=asciidoc
 au BufNewFile,BufRead *.less set filetype=css
 au BufNewFile,BufRead *.j2 set filetype=html
 au BufNewFile,BufRead *.pp set ts=2 sw=2
