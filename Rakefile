@@ -84,8 +84,28 @@ task :terminfo do
     end
 end
 
+git_config = {
+    "user.name" => "Richard Gray",
+    "user.email" => "richard@crash.net.nz",
+    "push.default" => "simple",
+    "alias.lg" => "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit",
+}
+
+desc 'Configure git'
+task :gitconfig do
+    info "Configuring git"
+    hostname = `hostname`.strip
+    if hostname == "milo"
+        git_config["user.email"] = "richard.gray@smxemail.com"
+    end
+
+    git_config.each do |k, v|
+        `git config --global #{k} "#{v}"`
+    end
+end
+
 desc 'Install dot files.'
-task :install => [:symlink, :terminfo] do
+task :install => [:symlink, :gitconfig, :terminfo] do
 end
 
 
