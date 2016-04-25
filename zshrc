@@ -27,7 +27,7 @@ mkdir -p ~/working/go
 export GOPATH=~/working/go
 
 ## General environment stuff
-export PATH=${HOME}/bin:${GOPATH}/bin:/usr/local/sbin:/usr/local/bin:/Applications/Racket\ v6.0/bin:${PATH}
+export PATH=${HOME}/bin:${GOPATH}/bin:${HOME}/.local/bin:/opt/terraform:/usr/local/sbin:/usr/local/bin:/Applications/Racket\ v6.0/bin:${PATH}
 export VISUAL=vim
 export EDITOR=vim
 
@@ -46,7 +46,7 @@ fi
 
 ## Python stuff
 if [[ $(uname) == "Linux" ]]; then
-    export VEW_PATH="/usr/share/virtualenvwrapper/virtualenvwrapper.sh"
+    export VEW_PATH="/usr/bin/virtualenvwrapper.sh"
 else
     export VEW_PATH="/usr/local/bin/virtualenvwrapper.sh"
 fi
