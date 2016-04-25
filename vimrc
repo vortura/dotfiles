@@ -152,6 +152,7 @@ au BufNewFile,BufRead *.adoc set filetype=asciidoc
 au BufNewFile,BufRead *.less set filetype=css
 au BufNewFile,BufRead *.j2 set filetype=html
 au BufNewFile,BufRead *.pp set ts=2 sw=2
+au BufNewFile,BufRead *.eyaml set filetype=yaml
 autocmd filetype sh setlocal ts=2 sw=2
 
 " Highlight comments in italics
