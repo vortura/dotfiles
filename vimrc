@@ -5,7 +5,8 @@ filetype plugin indent on
 
 set nocompatible
 
-set modelines=1
+set modelines=5
+set modeline
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
