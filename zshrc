@@ -131,3 +131,11 @@ server() {
 chrome () {
     /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome $* 2>&1 &
 }
+
+##################
+## Local Config ##
+##################
+
+if [[ -f ~/.zshrc.local ]]; then
+    source ~/.zshrc.local
+fi
