@@ -45,24 +45,24 @@ fi
 
 
 ## Python stuff
-if [[ $(uname) == "Linux" ]]; then
-    export VEW_PATH="/usr/bin/virtualenvwrapper.sh"
-else
-    export VEW_PATH="/usr/local/bin/virtualenvwrapper.sh"
-fi
-
-if [[ -f $VEW_PATH ]]; then
-    export WORKON_HOME="${HOME}/lib/virtualenvs"
-    export PROJECT_HOME="${HOME}/projects"
-    [[ -d $WORKON_HOME ]] || mkdir -p $WORKON_HOME
-    source $VEW_PATH
-    export VIRTUAL_ENV_DISABLE_PROMPT=1
-
-    # pip should only run if there is a virtualenv currently activated
-    export PIP_REQUIRE_VIRTUALENV=true
-    # # cache pip-installed packages to avoid re-downloading
-    export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
-fi
+#if [[ $(uname) == "Linux" ]]; then
+    #export VEW_PATH="/usr/bin/virtualenvwrapper.sh"
+#else
+    #export VEW_PATH="/usr/local/bin/virtualenvwrapper.sh"
+#fi
+#
+#if [[ -f $VEW_PATH ]]; then
+    #export WORKON_HOME="${HOME}/lib/virtualenvs"
+    #export PROJECT_HOME="${HOME}/projects"
+    #[[ -d $WORKON_HOME ]] || mkdir -p $WORKON_HOME
+    #source $VEW_PATH
+    #export VIRTUAL_ENV_DISABLE_PROMPT=1
+#
+    ### pip should only run if there is a virtualenv currently activated
+    #export PIP_REQUIRE_VIRTUALENV=true
+    ## # cache pip-installed packages to avoid re-downloading
+    #export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+#fi
 
 
 
