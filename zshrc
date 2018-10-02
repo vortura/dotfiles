@@ -27,7 +27,7 @@ mkdir -p ~/working/go
 export GOPATH=~/working/go
 
 ## General environment stuff
-export PATH=${HOME}/bin:${GOPATH}/bin:${HOME}/.local/bin:/opt/terraform:/usr/local/sbin:/usr/local/bin:/Applications/Racket\ v6.0/bin:${PATH}:${HOME}/.gem/ruby/2.4.0/bin
+export PATH=${HOME}/bin:${GOPATH}/bin:${HOME}/.local/bin:/opt/terraform:/usr/local/sbin:/usr/local/bin:/Applications/Racket\ v6.0/bin:${PATH}:${HOME}/.gem/ruby/2.5.0/bin
 export VISUAL=vim
 export EDITOR=vim
 
