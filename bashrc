@@ -12,3 +12,5 @@ ${D}\n$ '
 export CLICOLOR=1
 
 alias db='cd ~/Dropbox'
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
